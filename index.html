@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tata Steel Internship Onboarding Process</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #dce5f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 30px 10px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .poster {
+    width: 794px;
+    background: #f0f4f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, #002855 0%, #003d80 60%, #005DAA 100%);
+    padding: 18px 28px 16px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    border-bottom: 4px solid #E87722;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.01'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .logo-wrap { flex-shrink: 0; }
+  .logo-wrap img { height: 64px; width: auto; display: block; }
+  .header-text { flex: 1; }
+  .header-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+  .header-text p {
+    font-size: 11px;
+    color: #ddeeff;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+  .tagline {
+    font-size: 9.5px;
+    color: #E87722;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 3px;
+    letter-spacing: 0.4px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Sub-ribbon */
+  .ribbon {
+    background: #005DAA;
+    text-align: center;
+    padding: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.6px;
+    border-bottom: 2px solid #E87722;
+  }
+
+  /* ── STEPS ── */
+  .steps { padding: 14px 20px 10px; }
+
+  .step-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 3px 12px rgba(0,53,140,0.10);
+    overflow: hidden;
+    position: relative;
+    min-height: 64px;
+  }
+
+  .step-accent { width: 7px; flex-shrink: 0; align-self: stretch; }
+  .step-num-wrap {
+    width: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+  }
+  .step-num {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 800;
+    color: #fff;
+  }
+  .step-body { flex: 1; padding: 10px 12px 10px 4px; }
+  .step-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #002855;
+    margin-bottom: 4px;
+  }
+  .step-desc {
+    font-size: 9.5px;
+    color: #4a4a4a;
+    line-height: 1.55;
+  }
+  .step-desc span { font-weight: 600; }
+
+  /* PPE badge */
+  .ppe-badge {
+    flex-shrink: 0;
+    margin-right: 10px;
+    background: #FFF3E0;
+    border: 1.5px solid #E87722;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #E87722;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Arrow */
+  .arrow-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px 0;
+  }
+  .arrow-line { width: 2px; height: 8px; background: #005DAA; }
+  .arrow-head {
+    width: 0; height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #E87722;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    margin: 8px 20px 6px;
+    background: #FFF8F0;
+    border: 1.5px solid #E87722;
+    border-left: 5px solid #E87722;
+    border-radius: 8px;
+    padding: 8px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .note-content { flex: 1; }
+  .note-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+    color: #c45e00;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .note-text { font-size: 9px; color: #5a3a00; line-height: 1.6; }
+  .note-text strong { color: #c45e00; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #002855;
+    border-top: 3px solid #E87722;
+    padding: 9px 20px;
+    text-align: center;
+    font-size: 8px;
+    color: #8aaac8;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Print button */
+  .print-btn {
+    display: block;
+    margin: 18px auto 0;
+    padding: 10px 28px;
+    background: #005DAA;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+  }
+  .print-btn:hover { background: #003d80; }
+
+  @media print {
+
+  body {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .poster {
+    width: 794px;
+    margin: auto;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .print-btn {
+    display: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
+</style>
+</head>
+<body>
+
+<div>
+<div class="poster">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-wrap">
+      <img src="https://wallpapers.com/images/high/tata-steel-logo-blue-background-wur617j4ikw1llzc-2.png" alt="Tata Steel Logo">
+    </div>
+    <div class="header-text">
+      <h1>INTERNSHIP ONBOARDING PROCESS</h1>
+      <p>Step-by-Step Guide for New Interns &nbsp;|&nbsp;SNTI, Tata Steel, Jamshedpur,Jharkhand</p>
+      <div class="tagline">#WeAlsoMakeTomorrow</div>
+    </div>
+  </div>
+
+  <div class="ribbon">FOLLOW ALL STEPS CAREFULLY TO BEGIN YOUR INTERNSHIP AT TATA STEEL PLANT</div>
+
+  <!-- STEPS -->
+  <div class="steps">
+
+    <!-- STEP 01 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#005DAA;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#005DAA;">01</div></div>
+        <div class="step-body">
+          <div class="step-title">Fill the Tata Parikshan Form</div>
+          <div class="step-desc"><b>Register on the Tata Steel Internship Portal and complete the Tata Parikshan application form with all required academic and personal details.</b></div>
+        </div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 02 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#1565C0;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#1565C0;">02</div></div>
+        <div class="step-body">
+          <div class="step-title">Wait for Official Acceptance Email</div>
+          <div class="step-desc"><b>After submitting the form, wait for the official acceptance / confirmation email from Tata Steel. <span>Do NOT proceed to the next step before receiving this email.</b></span></div>
+        </div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 03 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#0277BD;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#0277BD;">03</div></div>
+        <div class="step-body">
+          <div class="step-title">Contact Concerned Persons for Gate Pass Details</div>
+          <div class="step-desc"><b>Once the acceptance email is received, contact for gate pass process guidance:</b><br>
+            &nbsp;• <span><b>Abhiram Jha Sir</b></span> — <b>9263632892</b> &nbsp;&nbsp;&nbsp; • <span><b>Sumit Sir</b></span>&nbsp;• <span><b>Diksha Chopra</b></span> — <b>9113119093</b> &nbsp;&nbsp;</div>
+        </div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 04 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#00838F;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#00838F;">04</div></div>
+        <div class="step-body">
+          <div class="step-title">Visit SNTI 'N' Road Office, Bistupur, Jamshedpur</div>
+          <div class="step-desc"><b>Visit the SNTI office at N Road, Bistupur, Jamshedpur for Gate Pass processing. If you are carrying a laptop, get your</b> <span><b>Laptop Pass</b></span> <b>processed here as well.</b></div>
+        </div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 05 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#2E7D32;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#2E7D32;">05</div></div>
+        <div class="step-body">
+          <div class="step-title"><b>Wait for Gate Pass Ready Email (1–2 Working Days)</b></div>
+          <div class="step-desc"><b>Processing takes 1–2 working days. Wait for the official email from the</b> <span><b>SNTI Gate Pass Department</b></span><b> confirming your gate pass is ready — only then go and collect your physical gate pass.</b></div>
+        </div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 06 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#E87722;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#E87722;">06</div></div>
+        <div class="step-body">
+          <div class="step-title">Arrange PPE Kit &amp; Contact for Any Doubts</div>
+          <div class="step-desc"><b>Contact:</b> <span><b>Abhiram Jha Sir (9263632892)</b></span> &amp; <span><b>Sumit Sir () </b></span> <span> &amp; <b>Diksha Chopra (9113119093)</b></span><b>for PPE / training doubts.</b><br>
+            <b>PPE Kit</b> <em><b>(Available at Sakchi </b>&amp; <b>Bistupur Market)</b></em> :&nbsp;
+            
+            <span>1. Safety Jacket</span> <b>(Orange)</b> &nbsp;&nbsp;
+            <span>2. Safety Shoes</span><b>(Black)</b> &nbsp;&nbsp;
+            <span>3. Safety Helmet</span> <b>(Yellow/Blue)</b></div>
+        </div>
+        <div class="ppe-badge">⚠ PPE<br>MANDATORY</div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 07 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#6A1B9A;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#6A1B9A;">07</div></div>
+        <div class="step-body">
+          <div class="step-title">Enter Tata Steel Plant with Gate Pass + RFID Card</div>
+          <div class="step-desc"><b>Wear your complete PPE Kit and carry your </b><span>Gate Pass</span> + <span>RFID Card</span><b> mandatorily. Entry without complete PPE will be </b><span>strictly DENIED</span><b> at the gate.</b></div>
+        </div>
+      </div>
+      <div class="arrow-wrap"><div class="arrow-line"></div><div class="arrow-head"></div></div>
+    </div>
+
+    <!-- STEP 08 -->
+    <div class="step-row">
+      <div class="step-card">
+        <div class="step-accent" style="background:#1B6B35;"></div>
+        <div class="step-num-wrap"><div class="step-num" style="background:#1B6B35;">08</div></div>
+        <div class="step-body">
+          <div class="step-title">Call Your Guide — Begin Your Internship! 🎓</div>
+          <div class="step-desc"><b>Call your assigned guide, confirm their location inside the plant, report to them and officially</b> <span><b>start your internship project.</b></span></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /steps -->
+
+  <!-- NOTE BOX -->
+  <div class="note-box">
+    <div class="note-icon">⚠️</div>
+    <div class="note-content">
+      <div class="note-title">IMPORTANT NOTE — PERSONAL PROTECTIVE EQUIPMENT (PPE)</div>
+      <div class="note-text">
+        For <strong>Vocational Training</strong>, every student must wear the complete PPE Kit — entry inside the Tata Steel Plant will be <strong>denied</strong> without it.<br>
+        PPE Kit: &nbsp;<strong>1. Safety Jacket</strong> (Orange) &nbsp;|&nbsp; <strong>2. Safety Shoes</strong>(Black) &nbsp;|&nbsp; <strong>3. Safety Helmet</strong> (Yellow or Blue)<br>
+        Easily available at: <strong>Sakchi Market</strong> and <strong>Bistupur Market</strong>, Jamshedpur.
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Tata Steel Limited &nbsp;|&nbsp; SNTI, Jamshedpur &nbsp;|&nbsp; Internal Use – Internship Onboarding Guide &nbsp;|&nbsp; 2026 &nbsp;|&nbsp; SNTI, Jamshedpur &nbsp;|&nbsp;Developed By Piyush Raj (VT20260821) &nbsp;
+  </div>
+  </div>
+
+</div><!-- /poster -->
+
+<button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+</body>
+</html>
