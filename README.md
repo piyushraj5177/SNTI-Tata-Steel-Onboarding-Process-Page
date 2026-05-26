@@ -20,7 +20,6 @@ The webpage includes:
 
 - HTML5
 - CSS3
-- JavaScript (if applicable)
 
 ---
 
@@ -28,7 +27,6 @@ The webpage includes:
 
 ```bash
 index.html
-tata-logo.png
 README.md
 ```
 
@@ -100,7 +98,8 @@ in any web browser.
 
 ```bash
 Piyush Raj
-Electronics and Computer Science Engineering Student
+Vocational Training Student at SNTI TATA Steels Jamshedpur 
+Registration No:- VT20260821
 ```
 
 ---
@@ -134,4 +133,5 @@ For suggestions or improvements, feel free to connect.
 
 ```bash
 GitHub: https://github.com/piyushraj5177
+Email : piyushraj5177@gmail.com
 ```
